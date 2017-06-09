@@ -1,3 +1,3 @@
-# darkable_help
+# darktable_help
 Darktable Help
 * Commands and Scripts to help with Darktable
