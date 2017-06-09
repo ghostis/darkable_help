@@ -2,7 +2,7 @@
 * Quit Darktable to allow access to Darktable's database
 * Backup your Darktable database:
 
-```cp ~/.config/darktable/library.db ~/.config/darktable/library.db.`date +%Y%m%d%H%M`
+```cp ~/.config/darktable/library.db ~/.config/darktable/library.db.`date +%Y%m%d%H%M````
 
 # Images in lighttable are showing up as "skull and cross bones" icon
 * Print film rolls that do not exist on disk:
@@ -15,4 +15,4 @@
 
 * Update the row in the the film_rolls table:
 
-```sqlite3 ~/.config/darktable/library.db "UPDATE film_rolls SET folder = '/Full/correct/actual/path/to/missing/film/roll/on/disk' WHERE id = ID_FROM_PREVIOUS_COMMAND ;"
+```sqlite3 ~/.config/darktable/library.db "UPDATE film_rolls SET folder = '/Full/correct/actual/path/to/missing/film/roll/on/disk' WHERE id = ID_FROM_PREVIOUS_COMMAND ;"```
