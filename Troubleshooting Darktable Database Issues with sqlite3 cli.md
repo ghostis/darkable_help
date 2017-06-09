@@ -17,6 +17,6 @@
 
 * In your Darktable library on disk, find the correct actual full path to the mis-named film roll.
 
-* Update the row in the the film_rolls table. Replace */Full/correct/actual/path/to/missing/film/roll/on/disk* with the actual path. Replace *ID_FROM_PREVIOUS_COMMAND* with the actual numerical ID of the broken film roll:
+* Update the row in the the film_rolls table. Replace */Full/correct/actual/path/to/missing/film/roll/on/disk* with the actual path. Replace *ID_FROM_PREVIOUS_COMMAND* with the actual numerical ID of the broken film roll. Remember to use '' when you have single ' characters in the path, e.g., Ted's -> Ted''s :
 
 ```sqlite3 ~/.config/darktable/library.db "UPDATE film_rolls SET folder = '/Full/correct/actual/path/to/missing/film/roll/on/disk' WHERE id = ID_FROM_PREVIOUS_COMMAND ;"```
