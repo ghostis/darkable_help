@@ -7,6 +7,7 @@
 ```cp ~/.config/darktable/library.db ~/.config/darktable/library.db.`date +%Y%m%d%H%M` ```
 
 # PROBLEM: Images in lighttable are showing up as "skull and cross bones" icon
+* Darktable does not manage files on disk. If you have imported a film roll, the metadata for that film roll contains the full file system path to that film roll. If you rename that location, you will see black and white "skull and cross bones" icons in lighttable instead of your photos. This can also happen, if you rename a file.
 * Print film rolls that do not exist on disk:
 
 ```sqlite3 ~/.config/darktable/library.db 'SELECT * FROM film_rolls;' | awk -F\| '{print $NF}' | while IFS='' read -r line || [[ -n "$line" ]]; do if [ ! -d "${line}" ] ; then sqlite3 ~/.config/darktable/library.db "SELECT * FROM film_rolls WHERE folder = '${line}' ; " ; fi ; done```
