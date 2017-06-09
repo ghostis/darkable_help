@@ -6,7 +6,7 @@
 
 ```cp ~/.config/darktable/library.db ~/Documents/Darktable.library.db.backup.`date +%Y%m%d%H%M` ```
 
-# PROBLEM: Images in lighttable are showing up as "skull and cross bones" icon
+# PROBLEM: Images in lighttable are showing up as "skull and crossbones" icon
 ## Film roll folder in database differs from actual path on disk
 * Darktable does not manage files on disk. If you have imported a film roll, the metadata for that film roll contains the full file system path to that film roll. If you rename that location, you will see black and white "skull and cross bones" icons in lighttable instead of your photos. This can also happen if you rename an individual photo file.
 * Print database entries for film rolls that do not exist on disk:
