@@ -11,7 +11,8 @@
 * If you have imported a film roll, the metadata for that film roll contains the full file system path to that film roll. If you rename that location on disk, you will see black and white "skull and cross bones" icons in lighttable instead of your photos. This can also happen if you rename an individual photo file.
 * Print database entries for film rolls that do not exist on disk with this bash snippet:
 
-```#!/usr/bin/env bash
+```
+#!/usr/bin/env bash
 sqlite3 ~/.config/darktable/library.db 'SELECT * FROM film_rolls;' | \
 awk -F\| '{print $NF}' | \
 while IFS='' read -r line || [[ -n "$line" ]];
@@ -19,7 +20,8 @@ do
   if [ ! -d "${line}" ]
   then line_cleaned="`echo ${line} | sed -e \"s_'_''_g\" `" && sqlite3 ~/.config/darktable/library.db "SELECT * FROM film_rolls WHERE folder = '${line_cleaned}' ; "
   fi
-done```
+done
+```
 
 * Note the ID number in the first field.
 
