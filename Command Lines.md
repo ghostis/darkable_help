@@ -2,7 +2,7 @@
 * Quit Darktable to allow access to Darktable's database
 * Backup your Darktable database:
 
-```cp ~/.config/darktable/library.db ~/.config/darktable/library.db.`date +%Y%m%d%H%M````
+```cp ~/.config/darktable/library.db ~/.config/darktable/library.db.`date +%Y%m%d%H%M` ```
 
 # Images in lighttable are showing up as "skull and cross bones" icon
 * Print film rolls that do not exist on disk:
